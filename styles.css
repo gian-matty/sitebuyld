@@ -22,6 +22,16 @@
   --trust-text: #c4c2c3;
   --surface: rgba(17, 17, 20, 0.72);
   --surface-line: rgba(255, 255, 255, 0.12);
+  --ink: #111111;
+  --text-soft: #d0d0d0;
+  --text-tag: #d8d8d8;
+  --text-strong: #e6e6e6;
+  --text-quote: #eeeeee;
+  --text-faint: #a5a5a5;
+  --glow-btn: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 22px rgba(255, 255, 255, 0.32),
+    0 0 44px rgba(255, 255, 255, 0.12);
+  --glow-btn-hover: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 30px rgba(255, 255, 255, 0.5),
+    0 0 60px rgba(255, 255, 255, 0.22);
   --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
   --font-display: "BubbledotICG-FinePos", "Geist Pixel Circle", monospace;
 }
@@ -59,6 +69,14 @@ body {
 
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 999px;
 }
 
 /* ============================= Background video ============================= */
@@ -124,7 +142,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: clamp(18px, 2.8vw, 28px);
-  max-width: 760px;
+  max-width: 880px;
   width: 100%;
 }
 
@@ -169,7 +187,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(4px, 0.8vw, 12px);
+  gap: clamp(4px, 0.8vw, 10px);
   height: clamp(44px, 5.2vw, 48px);
   max-width: 470px;
   flex: 1 1 auto;
@@ -190,7 +208,7 @@ a {
   text-decoration: none;
   white-space: nowrap;
   opacity: 0.5;
-  padding: 6px 5px;
+  padding: 6px 4px;
   transition: opacity 0.25s ease, color 0.25s ease;
 }
 
@@ -334,7 +352,7 @@ a {
 }
 
 .a-inner i {
-  color: #111;
+  color: var(--ink);
   font-size: calc(var(--trust-size) * 0.34);
 }
 
@@ -430,7 +448,7 @@ a {
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: clamp(calc(13.5px + 2pt), calc(1.55vw + 2pt), calc(16.5px + 2pt));
-  color: #d0d0d0;
+  color: var(--text-soft);
   opacity: 0.8;
   line-height: 1.55;
 }
@@ -448,7 +466,8 @@ a {
 
 /* CTA */
 
-.cta {
+.cta,
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -457,21 +476,30 @@ a {
   color: #000;
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: clamp(13.5px, 1.5vw, 14.5px);
+  font-size: 14.5px;
   letter-spacing: -0.01em;
   padding: clamp(11px, 1.6vh, 13px) clamp(22px, 3vw, 28px);
+  border: 0;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 22px rgba(255, 255, 255, 0.32),
-    0 0 44px rgba(255, 255, 255, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: revealPulse 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  cursor: pointer;
+  box-shadow: var(--glow-btn);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.cta:hover {
+.cta:hover,
+.btn:hover {
+  box-shadow: var(--glow-btn-hover);
+}
+
+.btn:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 30px rgba(255, 255, 255, 0.5),
-    0 0 60px rgba(255, 255, 255, 0.22);
+}
+
+.cta {
+  font-size: clamp(13.5px, 1.5vw, 14.5px);
+  animation: revealPulse 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes revealPulse {
@@ -493,38 +521,13 @@ a {
 
 /* Generic button */
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  background: #fff;
-  color: #000;
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 14.5px;
-  letter-spacing: -0.01em;
-  padding: 13px 26px;
-  border-radius: 999px;
-  text-decoration: none;
-  border: 0;
-  cursor: pointer;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 22px rgba(255, 255, 255, 0.28),
-    0 0 44px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 30px rgba(255, 255, 255, 0.45),
-    0 0 60px rgba(255, 255, 255, 0.2);
-}
-
 .btn-ghost {
   background: transparent;
-  color: #fff;
+  color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .btn-ghost:hover {
@@ -535,10 +538,14 @@ a {
 
 /* ============================= Shared reveal ============================= */
 
-.anim {
+.anim,
+.r {
   opacity: 0;
   transform: translateY(22px) scale(0.98);
   filter: blur(6px);
+}
+
+.anim {
   animation: reveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--d, 0s);
 }
@@ -566,9 +573,6 @@ a {
 /* Scroll reveal (sections below the fold) */
 
 .r {
-  opacity: 0;
-  transform: translateY(22px) scale(0.98);
-  filter: blur(6px);
   transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), filter 0.85s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--d, 0s);
@@ -663,7 +667,7 @@ a {
   font-weight: 400;
   font-size: clamp(15px, 1.6vw, 17px);
   line-height: 1.55;
-  color: #d0d0d0;
+  color: var(--text-soft);
   opacity: 0.8;
 }
 
@@ -875,7 +879,7 @@ a {
   border-top: 1px dashed rgba(255, 255, 255, 0.12);
   font-weight: 400;
   font-size: 14px;
-  color: #e6e6e6;
+  color: var(--text-strong);
 }
 
 .plan-feats li::before {
@@ -995,7 +999,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-weight: 500;
   font-size: 12px;
-  color: #d8d8d8;
+  color: var(--text-tag);
 }
 
 /* Quotes */
@@ -1029,7 +1033,7 @@ a {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
-  color: #eee;
+  color: var(--text-quote);
 }
 
 .quote figcaption {
@@ -1239,7 +1243,7 @@ a {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #a5a5a5;
+  color: var(--text-faint);
   font-size: 13px;
   font-weight: 400;
 }
@@ -1526,6 +1530,10 @@ a {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 body.menu-open .burger {
   background: #fff;
 }
@@ -1555,6 +1563,10 @@ body.menu-open .burger span:nth-child(3) {
 }
 
 @media (max-width: 900px) {
+  .signin {
+    display: none;
+  }
+
   .cards,
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -1609,6 +1621,7 @@ body.menu-open .burger span:nth-child(3) {
     font-size: clamp(30px, 8.8vw, 46px);
     letter-spacing: -0.08em;
     line-height: 1.05;
+    white-space: normal;
   }
 
   .stats {

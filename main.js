@@ -1,3 +1,5 @@
+const CONTACT_EMAIL = "example@sitebuyld.com";
+
 const I18N = {
   en: {
     "nav.home": "Home",
@@ -836,9 +838,9 @@ function runCount(stat, index) {
       }).catch(() => {});
     } catch (err) {}
 
-    const subject = encodeURIComponent(name + " — sitebudget request");
+    const subject = encodeURIComponent(name + " — sitebuyld request");
     const body = encodeURIComponent(message + "\n\nbilingual: " + bilingual);
-    window.location.href = "mailto:hello@sitebuyld.com?subject=" + subject + "&body=" + body;
+    window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
 
     const btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;

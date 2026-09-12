@@ -73,7 +73,7 @@ def notify_email(record):
     host = os.environ.get("SMTP_HOST")
     user = os.environ.get("SMTP_USER")
     secret = os.environ.get("SMTP_PASS")
-    to_addr = os.environ.get("CONTACT_TO", "hello@sitebuyld.com")
+    to_addr = os.environ.get("CONTACT_TO", "example@sitebuyld.com")
     if not (host and user and secret):
         return
 

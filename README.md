@@ -90,9 +90,9 @@ Se imposti queste variabili d'ambiente, ogni richiesta viene anche inoltrata via
 ```bash
 export SMTP_HOST=smtp.example.com
 export SMTP_PORT=587
-export SMTP_USER=hello@sitebuyld.com
+export SMTP_USER=example@sitebuyld.com
 export SMTP_PASS=****************
-export CONTACT_TO=hello@sitebuyld.com   # destinatario (default: hello@sitebuyld.com)
+export CONTACT_TO=example@sitebuyld.com   # destinatario (default: example@sitebuyld.com)
 ```
 
 Se le variabili SMTP non sono configurate il messaggio viene comunque salvato su file e il form apre sempre `mailto:` come fallback.
@@ -111,7 +111,7 @@ Se le variabili SMTP non sono configurate il messaggio viene comunque salvato su
 
 - **Logo**: sostituisci `assets/logo.webp`
 - **Prezzi**: testo nei blocchi `.plan` di `index.html` (il prezzo barrato è `.was`, quello attuale `.now`)
-- **Email di contatto**: cerca `hello@sitebuyld.com` in `index.html`, `main.js` e `server.py`
+- **Email di contatto**: cerca `example@sitebuyld.com` in `index.html`, `main.js` e `server.py`
 - **Video di sfondo**: URL dentro `<video class="bg-video">` in `index.html` (CloudFront)
 - **Metriche hero**: attributi `data-target` / `data-suffix` / `data-decimals` in `.stat`
 
