@@ -1,0 +1,863 @@
+{
+  "texts": {
+    "en": {
+      "nav.home": "Home",
+      "nav.product": "Product",
+      "nav.pricing": "Pricing",
+      "nav.work": "Case Studies",
+      "nav.contact": "Contact",
+      "nav.signin": "Get Your Site",
+      "nav.cta": "Get Your Site",
+      "hero.trust": "Trusted by 2000+ Enterprises",
+      "hero.l1": "Intelligence",
+      "hero.l2": "Designed To Evolve",
+      "hero.sub": "Modern websites, built with AI and shipped in 48 hours — at prices that make sense for your business.",
+      "hero.cta": "See the prices",
+      "hero.ig": "Instagram",
+      "product.eyebrow": "What you get",
+      "product.title": "Your site, built by AI",
+      "product.lede": "Stop paying agency prices. We design, write and ship a modern website for you in days — not months.",
+      "product.f1t": "48-Hour Delivery",
+      "product.f1d": "Your first version ships within two days of your brief.",
+      "product.f2t": "Copywriting Included",
+      "product.f2d": "We write every line — in your language and your tone of voice.",
+      "product.f3t": "Mobile First",
+      "product.f3d": "Pixel-perfect on every screen, from phones to 4K monitors.",
+      "product.f4t": "SEO Start Kit",
+      "product.f4d": "Meta, speed and structure tuned to get you found on Google.",
+      "steps.eyebrow": "How it works",
+      "steps.title": "From brief to launch",
+      "steps.1t": "Tell us your idea",
+      "steps.1d": "A ten-minute call or a short chat is enough.",
+      "steps.2t": "AI designs it",
+      "steps.2d": "Pages, copy and layout matched to your brand.",
+      "steps.3t": "You approve",
+      "steps.3d": "Ask for tweaks until it feels exactly right.",
+      "steps.4t": "We launch",
+      "steps.4d": "Domain, hosting and analytics — all handled.",
+      "price.eyebrow": "Pricing",
+      "price.title": "Prices that make you smile",
+      "price.lede": "One-time payment. No subscriptions. No fine print.",
+      "price.reco": "Most popular",
+      "price.cta": "Order this site",
+      "price.note": "* One-time price, VAT not included. Don't see your plan? We do custom builds too.",
+      "work.eyebrow": "Case studies",
+      "work.title": "Sites we shipped",
+      "work.lede": "Small businesses, real results — out quickly, built to last.",
+      "tst.eyebrow": "Loved",
+      "tst.title": "Before and after",
+      "faq.eyebrow": "FAQ",
+      "faq.title": "Questions, answered",
+      "cta.title": "Ready when you are.",
+      "cta.lede": "Tell us your idea — get a price today.",
+      "cta.ig": "Chat on Instagram",
+      "cta.mail": "Email us",
+      "contact.eyebrow": "Contact",
+      "contact.title": "One message is enough",
+      "contact.lede": "We answer within 24 hours, usually faster.",
+      "form.name": "Your name",
+      "form.email": "Your email",
+      "form.msg": "Tell us your idea...",
+      "form.send": "Send message",
+      "form.extra": "Add bilingual copy (+ 2 languages)",
+      "form.done": "Message sent — thank you!",
+      "footer.name": "sitebuyld",
+      "footer.line": "© 2026 Sitebuyld — Websites built with AI & espresso."
+    },
+    "it": {
+      "nav.home": "Home",
+      "nav.product": "Prodotto",
+      "nav.pricing": "Prezzi",
+      "nav.work": "Case Study",
+      "nav.contact": "Contatti",
+      "nav.signin": "Ottieni il tuo Sito",
+      "nav.cta": "Ottieni il tuo Sito",
+      "hero.trust": "Adottato da oltre 2000 Aziende",
+      "hero.l1": "Intelligenza",
+      "hero.l2": "Progettata Per Evolversi",
+      "hero.sub": "Siti web moderni, costruiti con l'AI e consegnati in 48 ore — a prezzi che hanno senso per la tua attività.",
+      "hero.cta": "Vedi i prezzi",
+      "hero.ig": "Instagram",
+      "product.eyebrow": "Cosa ottieni",
+      "product.title": "Il tuo sito, costruito dall'AI",
+      "product.lede": "Basta prezzi da agenzia. Progettiamo, scriviamo e consegniamo un sito web moderno in pochi giorni — non in mesi.",
+      "product.f1t": "Consegna in 48 Ore",
+      "product.f1d": "La prima versione arriva entro due giorni dal briefing.",
+      "product.f2t": "Copywriting Incluso",
+      "product.f2d": "Scriviamo ogni riga — nella tua lingua e nel tuo tono di voce.",
+      "product.f3t": "Mobile First",
+      "product.f3d": "Perfetto su ogni schermo, dai telefoni ai monitor 4K.",
+      "product.f4t": "Kit SEO",
+      "product.f4d": "Meta, velocità e struttura ottimizzate per trovarti su Google.",
+      "steps.eyebrow": "Come funziona",
+      "steps.title": "Dal briefing al lancio",
+      "steps.1t": "Raccontaci l'idea",
+      "steps.1d": "Basta una chiamata di dieci minuti o un messaggio.",
+      "steps.2t": "L'AI la progetta",
+      "steps.2d": "Pagine, testi e layout su misura per il tuo brand.",
+      "steps.3t": "Tu approvi",
+      "steps.3d": "Chiedi modifiche finché non è perfetto.",
+      "steps.4t": "Lanciamo",
+      "steps.4d": "Dominio, hosting e analytics — tutto gestito.",
+      "price.eyebrow": "Prezzi",
+      "price.title": "Prezzi che ti fanno sorridere",
+      "price.lede": "Pagamento unico. Niente abbonamenti. Nessuna clausola nascosta.",
+      "price.reco": "Più scelto",
+      "price.cta": "Ordina questo sito",
+      "price.note": "* Prezzo una tantum, IVA esclusa. Non trovi il tuo piano? Facciamo anche progetti su misura.",
+      "work.eyebrow": "Case study",
+      "work.title": "Siti che abbiamo consegnato",
+      "work.lede": "Piccole imprese, risultati veri — pubblicati in fretta, costruiti per durare.",
+      "tst.eyebrow": "Consigliato",
+      "tst.title": "Prima e dopo",
+      "faq.eyebrow": "FAQ",
+      "faq.title": "Domande, risposte",
+      "cta.title": "Pronto quando lo sei tu.",
+      "cta.lede": "Raccontaci la tua idea — ricevi un prezzo oggi.",
+      "cta.ig": "Scrivi su Instagram",
+      "cta.mail": "Scrivici",
+      "contact.eyebrow": "Contatti",
+      "contact.title": "Basta un messaggio",
+      "contact.lede": "Rispondiamo entro 24 ore, di solito prima.",
+      "form.name": "Il tuo nome",
+      "form.email": "La tua email",
+      "form.msg": "Raccontaci la tua idea...",
+      "form.send": "Invia messaggio",
+      "form.extra": "Aggiungi testi bilingue (+ 2 lingue)",
+      "form.done": "Messaggio inviato — grazie!",
+      "footer.name": "sitebuyld",
+      "footer.line": "© 2026 Sitebuyld — Siti web costruiti con l'AI & espresso."
+    },
+    "fr": {
+      "nav.home": "Accueil",
+      "nav.product": "Produit",
+      "nav.pricing": "Tarifs",
+      "nav.work": "Études de cas",
+      "nav.contact": "Contact",
+      "nav.signin": "Obtenez votre site",
+      "nav.cta": "Obtenez votre site",
+      "hero.trust": "La confiance de plus de 2000 entreprises",
+      "hero.l1": "Intelligence",
+      "hero.l2": "Conçue Pour Évoluer",
+      "hero.sub": "Des sites modernes, créés par l'IA et livrés en 48 heures — à des prix qui ont du sens pour votre activité.",
+      "hero.cta": "Voir les tarifs",
+      "hero.ig": "Instagram",
+      "product.eyebrow": "Ce que vous obtenez",
+      "product.title": "Votre site, créé par l'IA",
+      "product.lede": "Fini les prix d'agence. Nous concevons, écrivons et livrons un site moderne en quelques jours — pas en plusieurs mois.",
+      "product.f1t": "Livraison en 48 h",
+      "product.f1d": "Votre première version arrive sous deux jours après le brief.",
+      "product.f2t": "Rédaction incluse",
+      "product.f2d": "Nous écrivons chaque ligne — dans votre langue et votre ton.",
+      "product.f3t": "Mobile First",
+      "product.f3d": "Parfait sur tous les écrans, du téléphone au 4K.",
+      "product.f4t": "Kit SEO",
+      "product.f4d": "Meta, vitesse et structure optimisées pour être trouvé sur Google.",
+      "steps.eyebrow": "Comment ça marche",
+      "steps.title": "Du brief au lancement",
+      "steps.1t": "Dites-nous votre idée",
+      "steps.1d": "Un appel de dix minutes ou un message suffit.",
+      "steps.2t": "L'IA la conçoit",
+      "steps.2d": "Pages, textes et mise en page adaptés à votre marque.",
+      "steps.3t": "Vous validez",
+      "steps.3d": "Demandez des ajustements jusqu'à ce que ce soit parfait.",
+      "steps.4t": "Nous lançons",
+      "steps.4d": "Domaine, hébergement et analytics — tout est géré.",
+      "price.eyebrow": "Tarifs",
+      "price.title": "Des prix qui font sourire",
+      "price.lede": "Paiement unique. Sans abonnement. Sans mention en petits caractères.",
+      "price.reco": "Le plus choisi",
+      "price.cta": "Commander ce site",
+      "price.note": "* Prix unique, TVA non incluse. Vous ne trouvez pas votre forfait ? Nous faisons aussi du sur-mesure.",
+      "work.eyebrow": "Études de cas",
+      "work.title": "Les sites livrés",
+      "work.lede": "Petites entreprises, vrais résultats — publiés vite, conçus pour durer.",
+      "tst.eyebrow": "Aimé",
+      "tst.title": "Avant / après",
+      "faq.eyebrow": "FAQ",
+      "faq.title": "Des questions, des réponses",
+      "cta.title": "Prêt quand vous voulez.",
+      "cta.lede": "Dites-nous votre idée — obtenez un prix aujourd'hui.",
+      "cta.ig": "Discuter sur Instagram",
+      "cta.mail": "Écrivez-nous",
+      "contact.eyebrow": "Contact",
+      "contact.title": "Un message suffit",
+      "contact.lede": "Nous répondons sous 24 h, souvent plus vite.",
+      "form.name": "Votre nom",
+      "form.email": "Votre email",
+      "form.msg": "Dites-nous votre idée...",
+      "form.send": "Envoyer le message",
+      "form.extra": "Ajouter des textes bilingues (+ 2 langues)",
+      "form.done": "Message envoyé — merci !",
+      "footer.name": "sitebuyld",
+      "footer.line": "© 2026 Sitebuyld — Des sites web créés par l'IA & espresso."
+    },
+    "es": {
+      "nav.home": "Inicio",
+      "nav.product": "Producto",
+      "nav.pricing": "Precios",
+      "nav.work": "Casos de éxito",
+      "nav.contact": "Contacto",
+      "nav.signin": "Consigue tu sitio",
+      "nav.cta": "Consigue tu sitio",
+      "hero.trust": "Confían más de 2000 empresas",
+      "hero.l1": "Inteligencia",
+      "hero.l2": "Diseñada Para Evolucionar",
+      "hero.sub": "Sitios web modernos, creados con IA y entregados en 48 horas — a precios que tienen sentido para tu negocio.",
+      "hero.cta": "Ver precios",
+      "hero.ig": "Instagram",
+      "product.eyebrow": "Lo que obtienes",
+      "product.title": "Tu sitio, creado por IA",
+      "product.lede": "Olvídate de los precios de agencia. Diseñamos, escribimos y entregamos un sitio web moderno en días — no en meses.",
+      "product.f1t": "Entrega en 48 h",
+      "product.f1d": "Tu primera versión llega a los dos días del briefing.",
+      "product.f2t": "Redacción incluida",
+      "product.f2d": "Escribimos cada línea — en tu idioma y tu tono.",
+      "product.f3t": "Mobile First",
+      "product.f3d": "Perfecto en cualquier pantalla, del móvil al 4K.",
+      "product.f4t": "Kit SEO",
+      "product.f4d": "Meta, velocidad y estructura optimizadas para que te encuentren en Google.",
+      "steps.eyebrow": "Cómo funciona",
+      "steps.title": "Del brief al lanzamiento",
+      "steps.1t": "Cuéntanos tu idea",
+      "steps.1d": "Basta una llamada de diez minutos o un mensaje.",
+      "steps.2t": "La IA la diseña",
+      "steps.2d": "Páginas, textos y diseño a juego con tu marca.",
+      "steps.3t": "Tú apruebas",
+      "steps.3d": "Pide cambios hasta que sea exactamente lo que quieres.",
+      "steps.4t": "Lanzamos",
+      "steps.4d": "Dominio, hosting y analítica — todo gestionado.",
+      "price.eyebrow": "Precios",
+      "price.title": "Precios que te hacen sonreír",
+      "price.lede": "Pago único. Sin suscripciones. Sin letra pequeña.",
+      "price.reco": "El más elegido",
+      "price.cta": "Pedir este sitio",
+      "price.note": "* Precio único, IVA no incluido. ¿No encuentras tu plan? También hacemos proyectos a medida.",
+      "work.eyebrow": "Casos de éxito",
+      "work.title": "Los sitios que entregamos",
+      "work.lede": "Pequeños negocios, resultados reales — publicados rápido, hechos para durar.",
+      "tst.eyebrow": "Amado",
+      "tst.title": "Antes y después",
+      "faq.eyebrow": "FAQ",
+      "faq.title": "Preguntas y respuestas",
+      "cta.title": "Listo cuando tú quieras.",
+      "cta.lede": "Cuéntanos tu idea — consigue un precio hoy.",
+      "cta.ig": "Habla con nosotros en Instagram",
+      "cta.mail": "Escríbenos",
+      "contact.eyebrow": "Contacto",
+      "contact.title": "Un mensaje es suficiente",
+      "contact.lede": "Respondemos en 24 h, casi siempre antes.",
+      "form.name": "Tu nombre",
+      "form.email": "Tu email",
+      "form.msg": "Cuéntanos tu idea...",
+      "form.send": "Enviar mensaje",
+      "form.extra": "Añadir textos bilingües (+ 2 idiomas)",
+      "form.done": "Mensaje enviado — ¡gracias!",
+      "footer.name": "sitebuyld",
+      "footer.line": "© 2026 Sitebuyld — Sitios web creados con IA y espresso."
+    },
+    "de": {
+      "nav.home": "Start",
+      "nav.product": "Produkt",
+      "nav.pricing": "Preise",
+      "nav.work": "Fallstudien",
+      "nav.contact": "Kontakt",
+      "nav.signin": "Hol dir deine Seite",
+      "nav.cta": "Hol dir deine Seite",
+      "hero.trust": "Über 2000 Unternehmen vertrauen uns",
+      "hero.l1": "Intelligenz",
+      "hero.l2": "Zum Evolvieren Entwickelt",
+      "hero.sub": "Moderne Websites, mit KI gebaut und in 48 Stunden geliefert — zu Preisen, die für dein Unternehmen Sinn ergeben.",
+      "hero.cta": "Preise ansehen",
+      "hero.ig": "Instagram",
+      "product.eyebrow": "Was du bekommst",
+      "product.title": "Deine Website, von KI gebaut",
+      "product.lede": "Schluss mit Agentur-Preisen. Wir entwerfen, schreiben und liefern eine moderne Website in Tagen — nicht in Monaten.",
+      "product.f1t": "Lieferung in 48 Stunden",
+      "product.f1d": "Deine erste Version kommt innerhalb von zwei Tagen nach dem Briefing.",
+      "product.f2t": "Copywriting inklusive",
+      "product.f2d": "Wir schreiben jede Zeile — in deiner Sprache und deinem Ton.",
+      "product.f3t": "Mobile First",
+      "product.f3d": "Pixelperfekt auf jedem Bildschirm, vom Handy bis 4K.",
+      "product.f4t": "SEO-Startpaket",
+      "product.f4d": "Meta, Geschwindigkeit und Struktur optimiert, damit du auf Google gefunden wirst.",
+      "steps.eyebrow": "So funktioniert's",
+      "steps.title": "Vom Briefing zum Launch",
+      "steps.1t": "Erzähl uns deine Idee",
+      "steps.1d": "Ein zehnminütiger Anruf oder ein Chat genügt.",
+      "steps.2t": "KI entwirft sie",
+      "steps.2d": "Seiten, Texte und Layout passend zu deiner Marke.",
+      "steps.3t": "Du gibst grünes Licht",
+      "steps.3d": "Fordere Anpassungen an, bis es genau richtig ist.",
+      "steps.4t": "Wir launchen",
+      "steps.4d": "Domain, Hosting und Analytics — alles übernommen.",
+      "price.eyebrow": "Preise",
+      "price.title": "Preise, die dich lächeln lassen",
+      "price.lede": "Einmalzahlung. Keine Abos. Keine Kleingedruckten.",
+      "price.reco": "Am beliebtesten",
+      "price.cta": "Diese Seite bestellen",
+      "price.note": "* Einmalzahlung, ohne MwSt. Du findest deinen Plan nicht? Wir machen auch Custom-Builds.",
+      "work.eyebrow": "Fallstudien",
+      "work.title": "Websites, die wir geliefert haben",
+      "work.lede": "Kleine Unternehmen, echte Ergebnisse — schnell online, für Dauer gebaut.",
+      "tst.eyebrow": "Beliebt",
+      "tst.title": "Vorher und nachher",
+      "faq.eyebrow": "FAQ",
+      "faq.title": "Fragen, beantwortet",
+      "cta.title": "Bereit, wenn du es bist.",
+      "cta.lede": "Erzähl uns deine Idee — heute einen Preis bekommen.",
+      "cta.ig": "Schreib uns auf Instagram",
+      "cta.mail": "E-Mail an uns",
+      "contact.eyebrow": "Kontakt",
+      "contact.title": "Eine Nachricht genügt",
+      "contact.lede": "Wir antworten innerhalb von 24 Stunden, meist schneller.",
+      "form.name": "Dein Name",
+      "form.email": "Deine E-Mail",
+      "form.msg": "Erzähl uns deine Idee...",
+      "form.send": "Nachricht senden",
+      "form.extra": "Zweisprachige Texte hinzufügen (+ 2 Sprachen)",
+      "form.done": "Nachricht gesendet — danke!",
+      "footer.name": "sitebuyld",
+      "footer.line": "© 2026 Sitebuyld — Websites gebaut mit KI & Espresso."
+    }
+  },
+  "marquee": [
+    "AI Websites",
+    "48h Delivery",
+    "E-Commerce",
+    "SEO Ready",
+    "Mobile First",
+    "One-Time Price",
+    "Copywriting",
+    "Since 2025"
+  ],
+  "currency": "€",
+  "stats": [
+    {
+      "icon": "&lt;",
+      "target": 120.0,
+      "decimals": 0,
+      "suffix": "ms",
+      "label": {
+        "en": "Inference Time",
+        "it": "Tempo di Inferenza",
+        "fr": "Temps d'inférence",
+        "es": "Tiempo de inferencia",
+        "de": "Inferenzzeit"
+      }
+    },
+    {
+      "icon": "%",
+      "target": 99.99,
+      "decimals": 2,
+      "suffix": "%",
+      "label": {
+        "en": "Platform Uptime",
+        "it": "Uptime della Piattaforma",
+        "fr": "Disponibilité plateforme",
+        "es": "Disponibilidad plataforma",
+        "de": "Plattform-Uptime"
+      }
+    },
+    {
+      "icon": "*",
+      "target": 48.0,
+      "decimals": 0,
+      "suffix": "h",
+      "label": {
+        "en": "Delivery Time",
+        "it": "Tempo di Consegna",
+        "fr": "Délai de livraison",
+        "es": "Tiempo de entrega",
+        "de": "Lieferzeit"
+      }
+    },
+    {
+      "icon": "#",
+      "target": 2.4,
+      "decimals": 1,
+      "suffix": "M",
+      "label": {
+        "en": "Screenshots Deployed",
+        "it": "Screenshot Deployati",
+        "fr": "Captures déployées",
+        "es": "Capturas desplegadas",
+        "de": "Deployed Screenshots"
+      }
+    }
+  ],
+  "plans": [
+    {
+      "featured": false,
+      "was": 199,
+      "now": 79,
+      "name": {
+        "en": "Landing",
+        "it": "Landing",
+        "fr": "Landing",
+        "es": "Landing",
+        "de": "Landing"
+      },
+      "desc": {
+        "en": "Make your business findable online.",
+        "it": "Rendi la tua attività trovabile online.",
+        "fr": "Rendez votre activité visible en ligne.",
+        "es": "Haz que tu negocio sea fácil de encontrar online.",
+        "de": "Mach dein Unternehmen online auffindbar."
+      },
+      "feats": {
+        "en": [
+          "1 page + 5 sections",
+          "Mobile responsive",
+          "Contact form + WhatsApp",
+          "Basic SEO + Analytics",
+          "Delivery in 48 hours"
+        ],
+        "it": [
+          "1 pagina + 5 sezioni",
+          "Responsive mobile",
+          "Modulo contatti + WhatsApp",
+          "SEO base + Analytics",
+          "Consegna in 48 ore"
+        ],
+        "fr": [
+          "1 page + 5 sections",
+          "Responsive mobile",
+          "Formulaire de contact + WhatsApp",
+          "SEO de base + Analytics",
+          "Livraison en 48 h"
+        ],
+        "es": [
+          "1 página + 5 secciones",
+          "Responsive móvil",
+          "Formulario de contacto + WhatsApp",
+          "SEO básico + Analytics",
+          "Entrega en 48 h"
+        ],
+        "de": [
+          "1 Seite + 5 Abschnitte",
+          "Mobil responsive",
+          "Kontaktformular + WhatsApp",
+          "Basis-SEO + Analytics",
+          "Lieferung in 48 Stunden"
+        ]
+      }
+    },
+    {
+      "featured": true,
+      "was": 349,
+      "now": 149,
+      "name": {
+        "en": "Business",
+        "it": "Business",
+        "fr": "Business",
+        "es": "Business",
+        "de": "Business"
+      },
+      "desc": {
+        "en": "A full online presence for your company.",
+        "it": "Una presenza online completa per la tua azienda.",
+        "fr": "Une présence en ligne complète pour votre entreprise.",
+        "es": "Una presencia online completa para tu empresa.",
+        "de": "Eine komplette Online-Präsenz für dein Unternehmen."
+      },
+      "feats": {
+        "en": [
+          "Up to 10 pages",
+          "Blog or news section",
+          "Booking or catalogue",
+          "Copywriting in 4 languages",
+          "Speed tuning + SEO",
+          "Delivery in 48 hours"
+        ],
+        "it": [
+          "Fino a 10 pagine",
+          "Blog o sezione news",
+          "Prenotazioni o catalogo",
+          "Testi in 4 lingue",
+          "Ottimizzazione velocità + SEO",
+          "Consegna in 48 ore"
+        ],
+        "fr": [
+          "Jusqu'à 10 pages",
+          "Blog ou section actualités",
+          "Réservation ou catalogue",
+          "Rédaction en 4 langues",
+          "Optimisation vitesse + SEO",
+          "Livraison en 48 h"
+        ],
+        "es": [
+          "Hasta 10 páginas",
+          "Blog o sección de noticias",
+          "Reservas o catálogo",
+          "Redacción en 4 idiomas",
+          "Optimización de velocidad + SEO",
+          "Entrega en 48 h"
+        ],
+        "de": [
+          "Bis zu 10 Seiten",
+          "Blog oder News-Bereich",
+          "Buchung oder Katalog",
+          "Texte in 4 Sprachen",
+          "Speed-Tuning + SEO",
+          "Lieferung in 48 Stunden"
+        ]
+      }
+    },
+    {
+      "featured": false,
+      "was": 599,
+      "now": 299,
+      "name": {
+        "en": "Store",
+        "it": "Store",
+        "fr": "Store",
+        "es": "Store",
+        "de": "Store"
+      },
+      "desc": {
+        "en": "Sell online with zero headaches.",
+        "it": "Vendi online senza grattacapi.",
+        "fr": "Vendez en ligne sans stress.",
+        "es": "Vende online sin dolores de cabeza.",
+        "de": "Online verkaufen ohne Kopfzerbrechen."
+      },
+      "feats": {
+        "en": [
+          "Up to 100 products",
+          "Cart + secure checkout",
+          "Payments & shipping",
+          "Inventory dashboard",
+          "1 month of support"
+        ],
+        "it": [
+          "Fino a 100 prodotti",
+          "Carrello + checkout sicuro",
+          "Pagamenti e spedizioni",
+          "Dashboard inventario",
+          "1 mese di supporto"
+        ],
+        "fr": [
+          "Jusqu'à 100 produits",
+          "Panier + paiement sécurisé",
+          "Paiements et expédition",
+          "Tableau de bord stock",
+          "1 mois de support"
+        ],
+        "es": [
+          "Hasta 100 productos",
+          "Carrito + pago seguro",
+          "Pagos y envíos",
+          "Panel de inventario",
+          "1 mes de soporte"
+        ],
+        "de": [
+          "Bis zu 100 Produkte",
+          "Warenkorb + sicherer Checkout",
+          "Zahlungen & Versand",
+          "Inventar-Dashboard",
+          "1 Monat Support"
+        ]
+      }
+    }
+  ],
+  "works": [
+    {
+      "url": "osteria-del-porto.it",
+      "name": {
+        "en": "Osteria del Porto",
+        "it": "Osteria del Porto",
+        "fr": "Osteria del Porto",
+        "es": "Osteria del Porto",
+        "de": "Osteria del Porto"
+      },
+      "desc": {
+        "en": "Ristorante · Napoli — bookings up 132% in three months.",
+        "it": "Ristorante · Napoli — prenotazioni +132% in tre mesi.",
+        "fr": "Restaurant · Naples — réservations +132 % en trois mois.",
+        "es": "Restaurante · Nápoles — reservas +132 % en tres meses.",
+        "de": "Restaurant · Neapel — Buchungen +132 % in drei Monaten."
+      },
+      "tags": {
+        "en": [
+          "Landing",
+          "Booking",
+          "Tri-lingual"
+        ],
+        "it": [
+          "Landing",
+          "Prenotazioni",
+          "Trilingue"
+        ],
+        "fr": [
+          "Landing",
+          "Réservation",
+          "Trilingue"
+        ],
+        "es": [
+          "Landing",
+          "Reservas",
+          "Trilingüe"
+        ],
+        "de": [
+          "Landing",
+          "Buchung",
+          "Dreisprachig"
+        ]
+      }
+    },
+    {
+      "url": "yogaluna.it",
+      "name": {
+        "en": "YogaLuna",
+        "it": "YogaLuna",
+        "fr": "YogaLuna",
+        "es": "YogaLuna",
+        "de": "YogaLuna"
+      },
+      "desc": {
+        "en": "Studios · Milano — signups up 81% after relaunch.",
+        "it": "Centri · Milano — iscrizioni +81% dopo il rilancio.",
+        "fr": "Studios · Milan — inscriptions +81 % après relance.",
+        "es": "Estudios · Milán — inscripciones +81 % tras el relanzamiento.",
+        "de": "Studios · Mailand — Anmeldungen +81 % nach Relaunch."
+      },
+      "tags": {
+        "en": [
+          "Landing",
+          "Schedule",
+          "Newsletter"
+        ],
+        "it": [
+          "Landing",
+          "Orari",
+          "Newsletter"
+        ],
+        "fr": [
+          "Landing",
+          "Planning",
+          "Newsletter"
+        ],
+        "es": [
+          "Landing",
+          "Horarios",
+          "Newsletter"
+        ],
+        "de": [
+          "Landing",
+          "Zeitplan",
+          "Newsletter"
+        ]
+      }
+    },
+    {
+      "url": "elettramoto.it",
+      "name": {
+        "en": "Elettra Moto",
+        "it": "Elettra Moto",
+        "fr": "Elettra Moto",
+        "es": "Elettra Moto",
+        "de": "Elettra Moto"
+      },
+      "desc": {
+        "en": "Moto shop · Roma — catalogue launched in one week.",
+        "it": "Negozio moto · Roma — catalogo online in una settimana.",
+        "fr": "Moto shop · Rome — catalogue en ligne en une semaine.",
+        "es": "Tienda de motos · Roma — catálogo online en una semana.",
+        "de": "Motorradshop · Rom — Katalog online in einer Woche."
+      },
+      "tags": {
+        "en": [
+          "Store",
+          "Catalogue",
+          "Payments"
+        ],
+        "it": [
+          "Store",
+          "Catalogo",
+          "Pagamenti"
+        ],
+        "fr": [
+          "Store",
+          "Catalogue",
+          "Paiements"
+        ],
+        "es": [
+          "Store",
+          "Catálogo",
+          "Pagos"
+        ],
+        "de": [
+          "Store",
+          "Katalog",
+          "Zahlungen"
+        ]
+      }
+    }
+  ],
+  "quotes": [
+    {
+      "stars": 3,
+      "avatar": "M",
+      "q": {
+        "en": "An agency quoted us €6.000. Sitebuyld delivered more — for the price of a pizza party.",
+        "it": "Un'agenzia ci aveva chiesto 6.000 €. Sitebuyld ha consegnato di più — per il prezzo di una festa di pizza.",
+        "fr": "Une agence nous avait demandé 6 000 €. Sitebuyld a livré plus — pour le prix d'une fête à la pizza.",
+        "es": "Una agencia nos cobró 6.000 €. Sitebuyld entregó más — por el precio de una fiesta de pizza.",
+        "de": "Eine Agentur wollte 6.000 €. Sitebuyld hat mehr geliefert — für den Preis einer Pizza-Party."
+      },
+      "name": {
+        "en": "Marco",
+        "it": "Marco",
+        "fr": "Marco",
+        "es": "Marco",
+        "de": "Marco"
+      },
+      "role": {
+        "en": "Osteria owner",
+        "it": "Titolare osteria",
+        "fr": "Patron de restaurant",
+        "es": "Dueño de restaurante",
+        "de": "Gaststättenbesitzer"
+      }
+    },
+    {
+      "stars": 3,
+      "avatar": "E",
+      "q": {
+        "en": "Launched on Tuesday, first booking by Friday.",
+        "it": "Lancio martedì, prima prenotazione venerdì.",
+        "fr": "Lancé mardi, première réservation vendredi.",
+        "es": "Lanzado el martes, primera reserva el viernes.",
+        "de": "Dienstag gelauncht, Freitag die erste Buchung."
+      },
+      "name": {
+        "en": "Elena",
+        "it": "Elena",
+        "fr": "Elena",
+        "es": "Elena",
+        "de": "Elena"
+      },
+      "role": {
+        "en": "Yoga studio owner",
+        "it": "Titolare studio yoga",
+        "fr": "Patronne de studio de yoga",
+        "es": "Dueña de estudio de yoga",
+        "de": "Yoga-Studiobesitzerin"
+      }
+    },
+    {
+      "stars": 3,
+      "avatar": "S",
+      "q": {
+        "en": "My shop finally lives online, and I run everything from my phone.",
+        "it": "Il mio negozio finalmente vive online, e gestisco tutto dal telefono.",
+        "fr": "Ma boutique vit enfin en ligne et je gère tout depuis mon téléphone.",
+        "es": "Mi tienda por fin vive online, y lo gestiono todo desde el móvil.",
+        "de": "Mein Shop lebt endlich online, und ich steuere alles vom Handy."
+      },
+      "name": {
+        "en": "Saverio",
+        "it": "Saverio",
+        "fr": "Saverio",
+        "es": "Saverio",
+        "de": "Saverio"
+      },
+      "role": {
+        "en": "Moto shop owner",
+        "it": "Titolare negozio moto",
+        "fr": "Patron de moto shop",
+        "es": "Dueño de tienda de motos",
+        "de": "Motorradshop-Besitzer"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "How can the price be so low?",
+        "it": "Come fa a costare così poco?",
+        "fr": "Comment le prix est-il si bas ?",
+        "es": "¿Cómo puede ser tan barato?",
+        "de": "Wie kann der Preis so niedrig sein?"
+      },
+      "a": {
+        "en": "AI does the heavy lifting in design, copy and code. You pay for our curation and care — not for months of agency time.",
+        "it": "L'AI fa il lavoro pesante di design, testi e codice. Paghi la nostra cura — non mesi di tempo da agenzia.",
+        "fr": "L'IA fait le gros du travail : design, textes et code. Vous payez notre curation et notre soin — pas des mois de temps d'agence.",
+        "es": "La IA hace el trabajo pesado de diseño, textos y código. Pagas nuestra curación y cuidado — no meses de tiempo de agencia.",
+        "de": "KI übernimmt die schwere Arbeit bei Design, Text und Code. Du zahlst für unsere Kuratierung und Sorgfalt — nicht für Monate Agenturzeit."
+      }
+    },
+    {
+      "q": {
+        "en": "Will I own my site?",
+        "it": "Il sito è mio?",
+        "fr": "Est-ce que je possède mon site ?",
+        "es": "¿Será mío mi sitio?",
+        "de": "Gehört mir meine Website?"
+      },
+      "a": {
+        "en": "Yes. Domain, content and code are 100% yours. No lock-in, ever.",
+        "it": "Sì. Dominio, contenuti e codice sono al 100% tuoi. Mai vincolato.",
+        "fr": "Oui. Domaine, contenu et code vous appartiennent à 100 %. Sans verrouillage.",
+        "es": "Sí. Dominio, contenido y código son 100 % tuyos. Sin ataduras.",
+        "de": "Ja. Domain, Inhalte und Code gehören zu 100 % dir. Kein Lock-in."
+      }
+    },
+    {
+      "q": {
+        "en": "How long does it take?",
+        "it": "Quanto tempo ci vuole?",
+        "fr": "Combien de temps ça prend ?",
+        "es": "¿Cuánto tarda?",
+        "de": "Wie lange dauert es?"
+      },
+      "a": {
+        "en": "Your first version arrives in 48 hours. Most sites ship within a week.",
+        "it": "La prima versione arriva in 48 ore. La maggior parte dei siti va online entro una settimana.",
+        "fr": "Votre première version arrive en 48 h. La plupart des sites sont en ligne en une semaine.",
+        "es": "Tu primera versión llega en 48 h. La mayoría de los sitios salen en una semana.",
+        "de": "Deine erste Version kommt in 48 Stunden. Die meisten Websites sind innerhalb einer Woche live."
+      }
+    },
+    {
+      "q": {
+        "en": "Can I edit it later?",
+        "it": "Posso modificarlo dopo?",
+        "fr": "Puis-je le modifier plus tard ?",
+        "es": "¿Puedo editarlo después?",
+        "de": "Kann ich sie später bearbeiten?"
+      },
+      "a": {
+        "en": "Yes. We show you the basics, and edits are always one message away.",
+        "it": "Sì. Ti mostriamo le basi e le modifiche sono sempre a un messaggio di distanza.",
+        "fr": "Oui. Nous vous montrons les bases, et les modifications sont toujours à un message.",
+        "es": "Sí. Te enseñamos lo básico y las ediciones están siempre a un mensaje.",
+        "de": "Ja. Wir zeigen dir die Grundlagen, und Änderungen sind immer nur eine Nachricht entfernt."
+      }
+    },
+    {
+      "q": {
+        "en": "What if I want something custom?",
+        "it": "E se voglio qualcosa di personalizzato?",
+        "fr": "Et si je veux du sur-mesure ?",
+        "es": "¿Y si quiero algo personalizado?",
+        "de": "Was, wenn ich etwas Individuelles möchte?"
+      },
+      "a": {
+        "en": "Tell us the idea. If it needs more, we quote you before we start. No surprises.",
+        "it": "Raccontaci l'idea. Se serve di più, ti facciamo un preventivo prima di iniziare. Nessuna sorpresa.",
+        "fr": "Dites-nous l'idée. Si ça demande plus, nous vous fixons le prix avant de commencer. Sans surprise.",
+        "es": "Cuéntanos la idea. Si necesita más, te presupuestamos antes de empezar. Sin sorpresas.",
+        "de": "Erzähl uns die Idee. Wenn es mehr braucht, gibt es vorab einen Kostenvoranschlag. Keine Überraschungen."
+      }
+    }
+  ],
+  "links": {
+    "instagram": "https://www.instagram.com/sitebuyld_official",
+    "handle": "sitebuyld_official",
+    "email": "example@sitebuyld.com",
+    "x": "#"
+  }
+}

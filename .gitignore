@@ -5,3 +5,6 @@ __pycache__/
 venv/
 .env
 messages.json
+messages.csv
+data/content.json
+data/settings.json

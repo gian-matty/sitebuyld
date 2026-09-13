@@ -1,0 +1,9 @@
+{
+  "contact_to": "example@sitebuyld.com",
+  "smtp_host": "smtp.example.com",
+  "smtp_port": 587,
+  "smtp_user": "",
+  "smtp_pass": "",
+  "smtp_from": "Sitebuyld <no-reply@example.com>",
+  "smtp_use_tls": true
+}
