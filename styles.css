@@ -34,6 +34,7 @@
     0 0 60px rgba(255, 255, 255, 0.22);
   --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
   --font-display: "BubbledotICG-FinePos", "Geist Pixel Circle", monospace;
+  --danger: #ff4d4d;
 }
 
 /* ============================= Base ============================= */
@@ -1239,6 +1240,23 @@ summary:focus-visible {
   min-height: 110px;
 }
 
+.contact-form .invalid {
+  border-color: var(--danger);
+}
+
+.contact-form .form-error {
+  display: block;
+  margin-top: -6px;
+  color: #ff6b6b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.contact-form .form-error[hidden] {
+  display: none;
+}
+
 .form-note {
   display: flex;
   align-items: center;
@@ -1381,8 +1399,6 @@ summary:focus-visible {
   inset: 0;
   z-index: 40;
   background: rgba(0, 0, 0, 0.62);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
   animation: overlayIn 0.28s ease both;
 }
 
@@ -1530,7 +1546,8 @@ summary:focus-visible {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-body.menu-open {
+html.menu-open,
+html.menu-open body {
   overflow: hidden;
 }
 

@@ -851,41 +851,40 @@ def cmd_rm(args):
 
 def cmd_set(args):
     content = ensure_content()
-    if args.field == "text":
-        lang = canonical_lang(args.target)
-        value = " ".join(args.values) if args.values else args.value
+    what = args.set_what
+    if not what:
+        raise SystemExit("usage: cms.py set {text|link|plan} ...")
+    value = " ".join(getattr(args, "value", []) or []).strip()
+
+    if what == "text":
+        lang = canonical_lang(args.lang)
         content["texts"].setdefault(lang, {})[args.key] = value
         print("texts[%s][%s] = %r" % (lang, args.key, value))
-    elif args.field == "link":
-        value = args.target if args.target is not None else " ".join(args.value)
-        content.setdefault("links", {})[args.key] = value
-        print("links[%s] = %r" % (args.key, value))
-    elif args.field == "plan":
-        idx = int(args.key)
-        plan = content["plans"][idx]
-        prop, lang = args.target, args.lang
-        value = " ".join(args.value)
-        if prop in ("was", "now"):
-            plan[prop] = int(float(value))
-        elif prop == "featured":
-            plan[prop] = value.strip().lower() in ("1", "true", "yes", "si")
-        elif prop == "name":
+    elif what == "link":
+        content.setdefault("links", {})[args.name] = value
+        print("links[%s] = %r" % (args.name, value))
+    elif what == "plan":
+        plan = content["plans"][args.index]
+        field, lang = args.field, args.lang
+        if field in ("was", "now"):
+            plan[field] = int(float(value))
+        elif field == "featured":
+            plan[field] = value.lower() in ("1", "true", "yes", "si")
+        elif field == "name":
             plan.setdefault("name", {})[lang] = value
-        elif prop == "desc":
+        elif field == "desc":
             plan.setdefault("desc", {})[lang] = value
-        elif prop.startswith("feat"):
-            n = int(prop[4:]) - 1
+        elif field.startswith("feat"):
+            n = int(field[4:]) - 1
             feats = plan.setdefault("feats", {}).setdefault(lang, [])
             while len(feats) <= n:
                 feats.append("")
             feats[n] = value
         else:
-            raise SystemExit("unknown plan field: %s" % prop)
-        mutate(content)
+            raise SystemExit("unknown plan field: %s" % field)
         print("plan updated")
-        return
     else:
-        raise SystemExit("unknown field: %s" % args.field)
+        raise SystemExit("unknown set target: %s" % what)
     mutate(content)
 
 
@@ -945,12 +944,23 @@ def build_parser():
     rp.add_argument("what", choices=["marquee", "plan", "work", "quote", "faq", "stat"])
     rp.add_argument("index", type=int)
 
-    sp2 = sub.add_parser("set", help="set a value")
-    sp2.add_argument("field", choices=["text", "link", "plan"])
-    sp2.add_argument("key")
-    sp2.add_argument("target", nargs="?")
-    sp2.add_argument("lang", nargs="?")
-    sp2.add_argument("value", nargs="*")
+    sp2 = sub.add_parser("set", help="set a value (run with no subcommand to see help)")
+    st_sub = sp2.add_subparsers(dest="set_what")
+
+    tp = st_sub.add_parser("text", help="set a text key for a language")
+    tp.add_argument("key")
+    tp.add_argument("lang")
+    tp.add_argument("value", nargs="*")
+
+    lp = st_sub.add_parser("link", help="set a site link/email/handle")
+    lp.add_argument("name")
+    lp.add_argument("value", nargs="*")
+
+    pp = st_sub.add_parser("plan", help="set a plan field")
+    pp.add_argument("index", type=int)
+    pp.add_argument("field")  # was | now | featured | name | desc | featN
+    pp.add_argument("lang")
+    pp.add_argument("value", nargs="*")
 
     mp = sub.add_parser("messages", help="manage contact messages")
     mp.add_argument("action", choices=["list", "export", "rm", "read"])

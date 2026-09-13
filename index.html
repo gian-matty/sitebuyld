@@ -435,8 +435,11 @@
 
         <form class="contact-form r" id="contactForm" novalidate>
           <input type="text" name="name" required data-i18n-ph="form.name" placeholder="Your name" />
+          <span class="form-error" data-i18n-err="form.err.name" hidden></span>
           <input type="email" name="email" required data-i18n-ph="form.email" placeholder="Your email" />
+          <span class="form-error" data-i18n-err="form.err.email" hidden></span>
           <textarea name="message" rows="4" required data-i18n-ph="form.msg" placeholder="Tell us your idea..."></textarea>
+          <span class="form-error" data-i18n-err="form.err.msg" hidden></span>
           <button class="btn" type="submit" data-i18n="form.send">Send message</button>
           <label class="form-note"><input type="checkbox" name="bilingual" checked /><span data-i18n="form.extra">Add bilingual copy (+ 2 languages)</span></label>
         </form>

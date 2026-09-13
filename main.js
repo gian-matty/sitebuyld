@@ -63,6 +63,9 @@ const I18N = {
       "form.send": "Send message",
       "form.extra": "Add bilingual copy (+ 2 languages)",
       "form.done": "Message sent — thank you!",
+      "form.err.name": "Please enter your name.",
+      "form.err.email": "Please enter a valid email.",
+      "form.err.msg": "Please tell us your idea.",
       "footer.name": "sitebuyld",
       "footer.line": "© 2026 Sitebuyld — Websites built with AI & espresso.",
       "stats.1": "Inference Time",
@@ -187,6 +190,9 @@ const I18N = {
       "form.send": "Invia messaggio",
       "form.extra": "Aggiungi testi bilingue (+ 2 lingue)",
       "form.done": "Messaggio inviato — grazie!",
+      "form.err.name": "Inserisci il tuo nome.",
+      "form.err.email": "Inserisci un'email valida.",
+      "form.err.msg": "Raccontaci la tua idea.",
       "footer.name": "sitebuyld",
       "footer.line": "© 2026 Sitebuyld — Siti web costruiti con l'AI & espresso.",
       "stats.1": "Tempo di Inferenza",
@@ -311,6 +317,9 @@ const I18N = {
       "form.send": "Envoyer le message",
       "form.extra": "Ajouter des textes bilingues (+ 2 langues)",
       "form.done": "Message envoyé — merci !",
+      "form.err.name": "Veuillez saisir votre nom.",
+      "form.err.email": "Veuillez saisir une adresse email valide.",
+      "form.err.msg": "Parlez-nous de votre idée.",
       "footer.name": "sitebuyld",
       "footer.line": "© 2026 Sitebuyld — Des sites web créés par l'IA & espresso.",
       "stats.1": "Temps d'inférence",
@@ -435,6 +444,9 @@ const I18N = {
       "form.send": "Enviar mensaje",
       "form.extra": "Añadir textos bilingües (+ 2 idiomas)",
       "form.done": "Mensaje enviado — ¡gracias!",
+      "form.err.name": "Por favor, introduce tu nombre.",
+      "form.err.email": "Introduce un email válido.",
+      "form.err.msg": "Cuéntanos tu idea.",
       "footer.name": "sitebuyld",
       "footer.line": "© 2026 Sitebuyld — Sitios web creados con IA y espresso.",
       "stats.1": "Tiempo de inferencia",
@@ -559,6 +571,9 @@ const I18N = {
       "form.send": "Nachricht senden",
       "form.extra": "Zweisprachige Texte hinzufügen (+ 2 Sprachen)",
       "form.done": "Nachricht gesendet — danke!",
+      "form.err.name": "Bitte gib deinen Namen ein.",
+      "form.err.email": "Bitte gib eine gültige E-Mail ein.",
+      "form.err.msg": "Erzähl uns von deiner Idee.",
       "footer.name": "sitebuyld",
       "footer.line": "© 2026 Sitebuyld — Websites gebaut mit KI & Espresso.",
       "stats.1": "Inferenzzeit",
@@ -647,6 +662,10 @@ function applyLang(lang) {
   document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
     const val = dict[el.dataset.i18nPh];
     if (val !== undefined) el.setAttribute("placeholder", val);
+  });
+  document.querySelectorAll("[data-i18n-err]").forEach((el) => {
+    const val = dict[el.dataset.i18nErr];
+    if (val !== undefined) el.textContent = val;
   });
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     const active = btn.dataset.lang === lang;
@@ -783,6 +802,7 @@ function runCount(stat, index) {
     overlay.hidden = false;
     menu.hidden = false;
     document.body.classList.add("menu-open");
+    document.documentElement.classList.add("menu-open");
     burger.setAttribute("aria-expanded", "true");
     burger.setAttribute("aria-label", "Close menu");
   };
@@ -791,6 +811,7 @@ function runCount(stat, index) {
     overlay.hidden = true;
     menu.hidden = true;
     document.body.classList.remove("menu-open");
+    document.documentElement.classList.remove("menu-open");
     burger.setAttribute("aria-expanded", "false");
     burger.setAttribute("aria-label", "Open menu");
   };
@@ -822,14 +843,53 @@ function runCount(stat, index) {
   const form = document.getElementById("contactForm");
   if (!form) return;
 
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const fields = ["name", "email", "message"];
+  const errKeys = { name: "form.err.name", email: "form.err.email", message: "form.err.msg" };
+
+  function setError(name, show) {
+    const field = form.elements[name];
+    field.classList.toggle("invalid", show);
+    const errEl = document.querySelector('[data-i18n-err="' + errKeys[name] + '"]');
+    if (!errEl) return;
+    errEl.textContent = show ? I18N[currentLang()][errKeys[name]] : "";
+    errEl.hidden = !show;
+  }
+
+  function clearErrors() {
+    fields.forEach((name) => setError(name, false));
+  }
+
+  fields.forEach((name) => {
+    form.elements[name].addEventListener("input", () => setError(name, false));
+  });
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    clearErrors();
+
     const name = form.elements.name.value.trim();
     const email = form.elements.email.value.trim();
     const message = form.elements.message.value.trim();
     const bilingual = form.elements.bilingual.checked;
 
-    if (!name || !email || !message) return;
+    let firstInvalid = null;
+    if (!name) {
+      setError("name", true);
+      firstInvalid = firstInvalid || "name";
+    }
+    if (!email || !emailRe.test(email)) {
+      setError("email", true);
+      firstInvalid = firstInvalid || "email";
+    }
+    if (!message) {
+      setError("message", true);
+      firstInvalid = firstInvalid || "message";
+    }
+    if (firstInvalid) {
+      form.elements[firstInvalid].focus();
+      return;
+    }
 
     const payload = { name, email, message, bilingual };
     try {
