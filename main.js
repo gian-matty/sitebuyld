@@ -838,36 +838,49 @@ function runCount(stat, index) {
   const menu = document.getElementById("mobileMenu");
   if (!burger || !overlay || !menu) return;
 
+  const FOCUSABLE = 'a[href], button:not([disabled])';
+  const isOpen = () => document.body.classList.contains("menu-open");
+
   const openMenu = () => {
-    overlay.hidden = false;
-    menu.hidden = false;
-    document.body.classList.add("menu-open");
-    document.documentElement.classList.add("menu-open");
     burger.setAttribute("aria-expanded", "true");
     burger.setAttribute("aria-label", "Close menu");
+    overlay.setAttribute("aria-hidden", "false");
+    menu.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("menu-open");
+    document.body.classList.add("menu-open");
+    const first = menu.querySelector("a[href]");
+    if (first) first.focus({ preventScroll: true });
   };
 
   const closeMenu = () => {
-    overlay.hidden = true;
-    menu.hidden = true;
-    document.body.classList.remove("menu-open");
     document.documentElement.classList.remove("menu-open");
+    document.body.classList.remove("menu-open");
     burger.setAttribute("aria-expanded", "false");
     burger.setAttribute("aria-label", "Open menu");
+    overlay.setAttribute("aria-hidden", "true");
+    menu.setAttribute("aria-hidden", "true");
+    burger.focus({ preventScroll: true });
   };
 
-  burger.addEventListener("click", () => {
-    if (burger.getAttribute("aria-expanded") === "true") {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
+  burger.addEventListener("click", () => (isOpen() ? closeMenu() : openMenu()));
 
   overlay.addEventListener("click", closeMenu);
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
+    if (e.key === "Escape" && isOpen()) closeMenu();
+    if (e.key === "Tab" && isOpen()) {
+      const items = Array.from(menu.querySelectorAll(FOCUSABLE));
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   menu.addEventListener("click", (e) => {
@@ -875,7 +888,7 @@ function runCount(stat, index) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1279) closeMenu();
+    if (window.innerWidth > 1279 && isOpen()) closeMenu();
   });
 })();
 
