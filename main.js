@@ -657,11 +657,18 @@ function applyLang(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const val = dict[el.dataset.i18n];
-    if (val !== undefined) el.textContent = val;
+    if (val !== undefined) {
+      el.textContent = val;
+      const owner = el.closest("[data-aria-from]");
+      if (owner) owner.setAttribute("aria-label", val);
+    }
   });
   document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
     const val = dict[el.dataset.i18nPh];
-    if (val !== undefined) el.setAttribute("placeholder", val);
+    if (val !== undefined) {
+      el.setAttribute("placeholder", val);
+      el.setAttribute("aria-label", val);
+    }
   });
   document.querySelectorAll("[data-i18n-err]").forEach((el) => {
     const val = dict[el.dataset.i18nErr];
@@ -765,10 +772,43 @@ function runCount(stat, index) {
 })();
 
 (() => {
+  const video = document.querySelector(".bg-video");
+  if (!video || typeof window.matchMedia !== "function") return;
+
+  const mq = window.matchMedia("(max-width: 720px)");
+  let restored = true;
+
+  const disable = () => {
+    video.pause();
+    video.setAttribute("src", "");
+    restored = false;
+  };
+
+  const enable = () => {
+    video.removeAttribute("src");
+    void video.load();
+    video.play().catch(() => {});
+    restored = true;
+  };
+
+  const update = () => (mq.matches ? disable() : !restored ? enable() : undefined);
+
+  if (typeof mq.addEventListener === "function") {
+    mq.addEventListener("change", update);
+  }
+  update();
+})();
+
+(() => {
   const links = document.querySelectorAll("[data-nav]");
   const ids = ["home", "product", "pricing", "work", "contact"];
   const setActive = (name) => {
-    links.forEach((l) => l.classList.toggle("active", l.dataset.nav === name));
+    links.forEach((l) => {
+      const on = l.dataset.nav === name;
+      l.classList.toggle("active", on);
+      if (on) l.setAttribute("aria-current", "page");
+      else l.removeAttribute("aria-current");
+    });
   };
 
   links.forEach((link) => {
@@ -835,7 +875,7 @@ function runCount(stat, index) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 720) closeMenu();
+    if (window.innerWidth > 1279) closeMenu();
   });
 })();
 

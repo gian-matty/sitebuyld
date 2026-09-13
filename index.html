@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add("js");</script>
   <title>Sitebuyld — Intelligence Designed To Evolve</title>
   <meta name="description" content="Sitebuyld — modern websites built with AI at prices that make sense. Landing pages, business sites and online shops delivered in 48 hours." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="generator" content="Sitebuyld" />
   <meta name="theme-color" content="#000000" />
+  <meta name="application-name" content="Sitebuyld" />
+  <link rel="canonical" href="https://sitebuyld.com/" />
   <link rel="icon" href="assets/logo.webp" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sitebuyld" />
+  <meta property="og:title" content="Sitebuyld — Intelligence Designed To Evolve" />
+  <meta property="og:description" content="Modern websites built with AI at prices that make sense. Landing pages, business sites and online shops delivered in 48 hours." />
+  <meta property="og:url" content="https://sitebuyld.com/" />
+  <meta property="og:image" content="https://sitebuyld.com/assets/logo.webp" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sitebuyld — Intelligence Designed To Evolve" />
+  <meta name="twitter:description" content="Modern websites built with AI at prices that make sense. Landing pages, business sites and online shops delivered in 48 hours." />
+  <meta name="twitter:image" content="https://sitebuyld.com/assets/logo.webp" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +34,82 @@
   <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="noopener" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sitebuyld.com/#organization",
+        "name": "Sitebuyld",
+        "url": "https://sitebuyld.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sitebuyld.com/assets/logo.webp"
+        },
+        "sameAs": [
+          "https://www.instagram.com/sitebuyld_official"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sitebuyld.com/#website",
+        "url": "https://sitebuyld.com/",
+        "name": "Sitebuyld",
+        "publisher": { "@id": "https://sitebuyld.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sitebuyld.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can the price be so low?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI does the heavy lifting in design, copy and code. You pay for our curation and care — not for months of agency time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will I own my site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Domain, content and code are 100% yours. No lock-in, ever."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your first version arrives in 48 hours. Most sites ship within a week."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I edit it later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We show you the basics, and edits are always one message away."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I want something custom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tell us the idea. If it needs more, we quote you before we start. No surprises."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -31,14 +126,6 @@
         <img src="assets/logo.webp" alt="" width="52" height="52" />
       </a>
 
-      <nav class="nav" aria-label="Main">
-        <a class="nav-link active" href="#home" data-nav="home" data-i18n="nav.home">Home</a>
-        <a class="nav-link" href="#product" data-nav="product" data-i18n="nav.product">Product</a>
-        <a class="nav-link" href="#pricing" data-nav="pricing" data-i18n="nav.pricing">Pricing</a>
-        <a class="nav-link" href="#work" data-nav="work" data-i18n="nav.work">Case Studies</a>
-        <a class="nav-link" href="#contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-
       <div class="lang" role="group" aria-label="Language">
         <button class="lang-btn active" data-lang="en" type="button">EN</button>
         <button class="lang-btn" data-lang="it" type="button">IT</button>
@@ -54,6 +141,29 @@
       </button>
     </div>
   </header>
+
+  <nav class="side-nav" aria-label="Main">
+    <a class="side-link active" href="#home" data-nav="home" aria-label="Home" data-aria-from>
+      <i class="fa-solid fa-house" aria-hidden="true"></i>
+      <span class="side-label" data-i18n="nav.home">Home</span>
+    </a>
+    <a class="side-link" href="#product" data-nav="product" aria-label="Product" data-aria-from>
+      <i class="fa-solid fa-gem" aria-hidden="true"></i>
+      <span class="side-label" data-i18n="nav.product">Product</span>
+    </a>
+    <a class="side-link" href="#pricing" data-nav="pricing" aria-label="Pricing" data-aria-from>
+      <i class="fa-solid fa-tags" aria-hidden="true"></i>
+      <span class="side-label" data-i18n="nav.pricing">Pricing</span>
+    </a>
+    <a class="side-link" href="#work" data-nav="work" aria-label="Case Studies" data-aria-from>
+      <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+      <span class="side-label" data-i18n="nav.work">Case Studies</span>
+    </a>
+    <a class="side-link" href="#contact" data-nav="contact" aria-label="Contact" data-aria-from>
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      <span class="side-label" data-i18n="nav.contact">Contact</span>
+    </a>
+  </nav>
 
   <div class="menu-overlay" id="menuOverlay" hidden></div>
 
@@ -434,13 +544,13 @@
         </div>
 
         <form class="contact-form r" id="contactForm" novalidate>
-          <input type="text" name="name" required data-i18n-ph="form.name" placeholder="Your name" />
-          <span class="form-error" data-i18n-err="form.err.name" hidden></span>
-          <input type="email" name="email" required data-i18n-ph="form.email" placeholder="Your email" />
-          <span class="form-error" data-i18n-err="form.err.email" hidden></span>
-          <textarea name="message" rows="4" required data-i18n-ph="form.msg" placeholder="Tell us your idea..."></textarea>
-          <span class="form-error" data-i18n-err="form.err.msg" hidden></span>
-          <button class="btn" type="submit" data-i18n="form.send">Send message</button>
+          <input type="text" name="name" required autocomplete="name" data-i18n-ph="form.name" placeholder="Your name" />
+          <span class="form-error" data-i18n-err="form.err.name" hidden role="alert"></span>
+          <input type="email" name="email" required autocomplete="email" data-i18n-ph="form.email" placeholder="Your email" />
+          <span class="form-error" data-i18n-err="form.err.email" hidden role="alert"></span>
+          <textarea name="message" rows="4" required autocomplete="off" data-i18n-ph="form.msg" placeholder="Tell us your idea..."></textarea>
+          <span class="form-error" data-i18n-err="form.err.msg" hidden role="alert"></span>
+          <button class="btn" type="submit" data-i18n="form.send" aria-live="polite">Send message</button>
           <label class="form-note"><input type="checkbox" name="bilingual" checked /><span data-i18n="form.extra">Add bilingual copy (+ 2 languages)</span></label>
         </form>
       </div>

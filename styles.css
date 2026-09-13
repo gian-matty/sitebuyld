@@ -139,12 +139,20 @@ summary:focus-visible {
 }
 
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: clamp(18px, 2.8vw, 28px);
-  max-width: 880px;
+  max-width: 1180px;
   width: 100%;
+}
+
+.header .lang {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes slideDown {
@@ -182,55 +190,91 @@ summary:focus-visible {
   transform: scale(1.04);
 }
 
-/* Nav pill */
+/* Side navigation rail — collapsed to icons, expands on hover/focus */
 
-.nav {
+.side-nav {
+  position: fixed;
+  left: clamp(12px, 2vw, 26px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(4px, 0.8vw, 10px);
-  height: clamp(44px, 5.2vw, 48px);
-  max-width: 470px;
-  flex: 1 1 auto;
-  min-width: 0;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: #fff;
-  box-shadow: var(--nav-shadow);
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 8px;
+  border-radius: 18px;
+  background: rgba(17, 17, 20, 0.62);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.4);
 }
 
-.nav-link {
+.side-link {
   position: relative;
+  display: grid;
+  grid-template-columns: 30px 0fr;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 6px;
+  border-radius: 12px;
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: clamp(12px, 1.3vw, 15px);
-  letter-spacing: -0.01em;
-  color: var(--nav-text);
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  color: var(--text-soft);
   text-decoration: none;
   white-space: nowrap;
-  opacity: 0.5;
-  padding: 6px 4px;
-  transition: opacity 0.25s ease, color 0.25s ease;
+  opacity: 0.55;
+  transition: opacity 0.25s ease, color 0.25s ease, background 0.25s ease,
+    grid-template-columns 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.nav-link:hover {
-  opacity: 0.75;
+.side-link i {
+  grid-column: 1;
+  width: 30px;
+  text-align: center;
+  font-size: 15px;
 }
 
-.nav-link.active {
+.side-link .side-label {
+  grid-column: 2;
+  min-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.side-nav:hover .side-link,
+.side-nav:focus-within .side-link {
+  grid-template-columns: 30px 1fr;
+}
+
+.side-nav:hover .side-label,
+.side-nav:focus-within .side-label {
   opacity: 1;
 }
 
-.nav-link.active::after {
+.side-link:hover,
+.side-link.active {
+  opacity: 1;
+  color: #fff;
+}
+
+.side-link.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.side-link.active::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: 5px;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 3px;
-  height: 3px;
-  background: #000;
-  transform: translateX(-50%);
-  box-shadow: -5px 0 0 #000, 5px 0 0 #000;
+  height: 16px;
+  border-radius: 3px;
+  background: #fff;
 }
 
 /* Language switcher (desktop pill) */
@@ -257,13 +301,15 @@ summary:focus-visible {
   letter-spacing: -0.01em;
   color: var(--nav-text);
   opacity: 0.5;
-  padding: 7px 5px;
+  padding: 7px 9px;
   border-radius: 999px;
-  transition: opacity 0.25s ease, background 0.25s ease, color 0.25s ease;
+  transition: opacity 0.25s ease, background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .lang-btn:hover {
-  opacity: 0.75;
+  opacity: 0.85;
+  background: rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
 }
 
 .lang-btn.active {
@@ -290,13 +336,14 @@ summary:focus-visible {
   text-decoration: none;
   white-space: nowrap;
   box-shadow: var(--nav-shadow);
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .signin:hover {
-  background: #323234;
+  background: #3a3a3d;
   color: #fff;
   transform: translateY(-1px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 /* ============================= Hero ============================= */
@@ -539,8 +586,8 @@ summary:focus-visible {
 
 /* ============================= Shared reveal ============================= */
 
-.anim,
-.r {
+.js .anim,
+.js .r {
   opacity: 0;
   transform: translateY(22px) scale(0.98);
   filter: blur(6px);
@@ -1218,10 +1265,11 @@ summary:focus-visible {
   border: 1px solid var(--surface-line);
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
+  caret-color: #fff;
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 15px;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contact-form input::placeholder,
@@ -1232,7 +1280,9 @@ summary:focus-visible {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
 }
 
 .contact-form textarea {
@@ -1573,6 +1623,26 @@ body.menu-open .burger span:nth-child(3) {
 
 /* ============================= Responsive ============================= */
 
+@media (max-width: 1279px) {
+  .side-nav {
+    display: none;
+  }
+
+  .lang,
+  .signin {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
 @media (max-width: 1000px) {
   .works {
     grid-template-columns: repeat(2, 1fr);
@@ -1580,10 +1650,6 @@ body.menu-open .burger span:nth-child(3) {
 }
 
 @media (max-width: 900px) {
-  .signin {
-    display: none;
-  }
-
   .cards,
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -1614,19 +1680,8 @@ body.menu-open .burger span:nth-child(3) {
 }
 
 @media (max-width: 720px) {
-  .nav,
-  .lang,
-  .signin {
+  .bg-video {
     display: none;
-  }
-
-  .burger {
-    display: flex;
-  }
-
-  .header-inner {
-    justify-content: space-between;
-    gap: 12px;
   }
 
   .logo {
